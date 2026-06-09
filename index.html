@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador SLA Marketplace KAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="docroi-page">
+      <header class="docroi-header">
+        <div class="docroi-shell docroi-header-row">
+          <a class="docroi-logo" href="#top" aria-label="DOC ROI">
+            <img src="https://docroi.marketing/wp-content/uploads/2026/04/Logo_1_Doc_ROI.png" alt="DOC ROI" />
+          </a>
+          <nav class="docroi-top-nav" aria-label="Navegacion principal">
+            <a href="#simulador">Simulador</a>
+            <a href="#contrato">Contrato</a>
+            <a href="#dashboard">Dashboard</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="docroi-hero">
+          <div class="docroi-shell hero-grid">
+            <div class="hero-copy">
+              <p class="docroi-kicker docroi-kicker-dark">DOC ROI - KAI - SLA Marketplace</p>
+              <h1>Simulador SLA Marketplace KAI</h1>
+              <p>Herramienta formativa para convertir un acuerdo proveedor-marketplace en un diagnostico de servicio, riesgo contractual, margen operativo e indicadores de cumplimiento.</p>
+              <div class="hero-actions">
+                <a class="docroi-btn docroi-btn-light" href="#simulador">Iniciar assessment</a>
+                <a class="docroi-btn docroi-btn-soft" href="#dashboard">Ver decision</a>
+              </div>
+            </div>
+
+            <aside class="hero-diagnosis" aria-label="Diagnostico SLA">
+              <p class="docroi-kicker">Botiquin SLA</p>
+              <h2>Assessment operativo simulado</h2>
+              <ul>
+                <li><strong>GMV</strong><span>Ventas, comision y fee</span></li>
+                <li><strong>SLA</strong><span>Objetivo frente a dato real</span></li>
+                <li><strong>RISK</strong><span>Riesgo financiero y cliente</span></li>
+                <li><strong>GO</strong><span>Decision contractual accionable</span></li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section class="docroi-section intro-section">
+          <div class="docroi-shell">
+            <p class="docroi-kicker">Ruta de aprendizaje</p>
+            <h2 class="docroi-section-title">Del SLA escrito al cuadro de mando operativo</h2>
+            <div class="learning-flow">
+              <article><span>01</span><strong>Contrato</strong><p>Se definen partes, modelo comercial, responsabilidades y alcance.</p></article>
+              <article><span>02</span><strong>Economia</strong><p>Se calcula GMV, comision, fee, float financiero e ingreso neto.</p></article>
+              <article><span>03</span><strong>Servicio</strong><p>Se comparan objetivos SLA contra desempeno real simulado.</p></article>
+              <article><span>04</span><strong>Decision</strong><p>El sistema prescribe GO o REVISAR y explica el riesgo.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="docroi-section simulator-section" id="simulador">
+          <div class="docroi-shell">
+            <div class="simulator-head">
+              <div><p class="docroi-kicker">Formulario guiado</p><h2 class="docroi-section-title">Variables del assessment SLA</h2></div>
+              <button class="docroi-btn docroi-btn-secondary compact" id="loadDemo" type="button">Cargar ejemplo</button>
+            </div>
+
+            <div class="work-grid">
+              <section class="docroi-card form-panel">
+                <form id="slaForm" class="input-grid"></form>
+                <button class="docroi-btn docroi-btn-dark full-width" id="runSimulation" type="button">Calcular SLA</button>
+              </section>
+              <section class="docroi-card result-panel" id="dashboard" aria-live="polite">
+                <div class="panel-head"><div><p class="docroi-kicker">Prescripcion</p><h3>Dashboard ejecutivo</h3></div><button class="docroi-btn docroi-btn-secondary compact" id="copySummary" type="button">Copiar resumen</button></div>
+                <div id="resultView" class="result-view"></div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="docroi-section map-section" id="contrato">
+          <div class="docroi-shell">
+            <section class="docroi-card explain-panel">
+              <div class="panel-head"><div><p class="docroi-kicker">Resumen contractual</p><h3>Clausulas generadas por el simulador</h3></div></div>
+              <div id="contractView" class="process-view"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="docroi-footer">
+        <div class="docroi-shell">
+          <img class="docroi-footer-logo" src="https://docroi.marketing/wp-content/uploads/2026/04/Logo_1_Doc_ROI.png" alt="DOC ROI" />
+          <a class="docroi-footer-cta" href="https://docroi.marketing/contacta/" target="_blank" rel="noopener">Consulta con Doc ROI -></a>
+          <nav class="docroi-footer-links" aria-label="Enlaces DOC ROI">
+            <a href="https://docroi.marketing/politica-de-privacidad/" target="_blank" rel="noopener">Politica de privacidad</a>
+            <a href="https://docroi.marketing/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a>
+            <a href="https://docroi.marketing/propiedad-intelectual/" target="_blank" rel="noopener">Propiedad intelectual</a>
+          </nav>
+          <p class="legal">La propiedad intelectual del ecosistema Doc ROI pertenece al</p>
+          <p class="legal-owner">Ph. D. Jorge Lucio Sanchez Galan.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
