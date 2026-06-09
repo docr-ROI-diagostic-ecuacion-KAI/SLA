@@ -9,19 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="tag-fix.css" />
+    <link rel="stylesheet" href="deliverables.css" />
   </head>
   <body>
     <div class="docroi-page">
       <header class="docroi-header">
         <div class="docroi-shell docroi-header-row">
-          <span class="solution-tag">VITAMINAS · SERIE SOLUCIONES · 02·Operaciones Internacionales</span>
+          <span class="solution-tag">VITAMINAS &middot; SERIE SOLUCIONES &middot; 02&middot;Operaciones Internacionales</span>
           <a class="docroi-logo" href="#top" aria-label="DOC ROI">
             <img src="https://docroi.marketing/wp-content/uploads/2026/04/Logo_1_Doc_ROI.png" alt="DOC ROI" />
           </a>
           <nav class="docroi-top-nav" aria-label="Navegacion principal">
             <a href="#simulador">Simulador</a>
             <a href="#contrato">Contrato</a>
-            <a href="#dashboard">Dashboard</a>
+            <a href="#indicadores">Indicadores</a>
           </nav>
         </div>
       </header>
@@ -32,10 +33,13 @@
             <div class="hero-copy">
               <p class="docroi-kicker docroi-kicker-dark">DOC ROI - KAI - SLA Marketplace</p>
               <h1>Simulador SLA Marketplace KAI</h1>
-              <p>Herramienta formativa para convertir un acuerdo proveedor-marketplace en un diagnostico de servicio, riesgo contractual, margen operativo e indicadores de cumplimiento.</p>
+              <p>
+                Herramienta formativa para convertir un acuerdo proveedor-marketplace en un diagnostico
+                de servicio, riesgo contractual, margen operativo e indicadores de cumplimiento.
+              </p>
               <div class="hero-actions">
                 <a class="docroi-btn docroi-btn-light" href="#simulador">Iniciar assessment</a>
-                <a class="docroi-btn docroi-btn-soft" href="#dashboard">Ver decision</a>
+                <a class="docroi-btn docroi-btn-soft" href="#contrato">Ver contrato</a>
               </div>
             </div>
 
@@ -60,7 +64,7 @@
               <article><span>01</span><strong>Contrato</strong><p>Se definen partes, modelo comercial, responsabilidades y alcance.</p></article>
               <article><span>02</span><strong>Economia</strong><p>Se calcula GMV, comision, fee, float financiero e ingreso neto.</p></article>
               <article><span>03</span><strong>Servicio</strong><p>Se comparan objetivos SLA contra desempeno real simulado.</p></article>
-              <article><span>04</span><strong>Decision</strong><p>El sistema prescribe GO o REVISAR y explica el riesgo.</p></article>
+              <article><span>04</span><strong>Entregables</strong><p>El sistema devuelve contrato listo para firma e indicadores de seguimiento.</p></article>
             </div>
           </div>
         </section>
@@ -68,7 +72,10 @@
         <section class="docroi-section simulator-section" id="simulador">
           <div class="docroi-shell">
             <div class="simulator-head">
-              <div><p class="docroi-kicker">Formulario guiado</p><h2 class="docroi-section-title">Variables del assessment SLA</h2></div>
+              <div>
+                <p class="docroi-kicker">Formulario guiado</p>
+                <h2 class="docroi-section-title">Variables del assessment SLA</h2>
+              </div>
               <button class="docroi-btn docroi-btn-secondary compact" id="loadDemo" type="button">Cargar ejemplo</button>
             </div>
 
@@ -77,8 +84,15 @@
                 <form id="slaForm" class="input-grid"></form>
                 <button class="docroi-btn docroi-btn-dark full-width" id="runSimulation" type="button">Calcular SLA</button>
               </section>
+
               <section class="docroi-card result-panel" id="dashboard" aria-live="polite">
-                <div class="panel-head"><div><p class="docroi-kicker">Prescripcion</p><h3>Dashboard ejecutivo</h3></div><button class="docroi-btn docroi-btn-secondary compact" id="copySummary" type="button">Copiar resumen</button></div>
+                <div class="panel-head">
+                  <div>
+                    <p class="docroi-kicker">Prescripcion</p>
+                    <h3>Decision ejecutiva</h3>
+                  </div>
+                  <button class="docroi-btn docroi-btn-secondary compact" id="copySummary" type="button">Copiar resumen</button>
+                </div>
                 <div id="resultView" class="result-view"></div>
               </section>
             </div>
@@ -88,8 +102,28 @@
         <section class="docroi-section map-section" id="contrato">
           <div class="docroi-shell">
             <section class="docroi-card explain-panel">
-              <div class="panel-head"><div><p class="docroi-kicker">Resumen contractual</p><h3>Clausulas generadas por el simulador</h3></div></div>
-              <div id="contractView" class="process-view"></div>
+              <div class="panel-head">
+                <div>
+                  <p class="docroi-kicker">Contrato preparado</p>
+                  <h3>Documento base para revisar y firmar</h3>
+                </div>
+              </div>
+              <div id="contractView" class="contract-document"></div>
+              <button class="docroi-btn docroi-btn-dark full-width" id="copyContract" type="button">Copiar contrato preparado</button>
+            </section>
+          </div>
+        </section>
+
+        <section class="docroi-section dashboard-section" id="indicadores">
+          <div class="docroi-shell">
+            <section class="docroi-card explain-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="docroi-kicker">Cuadro de mando</p>
+                  <h3>Indicadores y alertas del SLA</h3>
+                </div>
+              </div>
+              <div id="indicatorsView" class="result-view"></div>
             </section>
           </div>
         </section>
@@ -109,6 +143,8 @@
         </div>
       </footer>
     </div>
+
     <script src="app.js"></script>
+    <script src="deliverables.js"></script>
   </body>
 </html>
