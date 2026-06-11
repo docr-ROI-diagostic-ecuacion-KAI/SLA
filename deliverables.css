@@ -1,4 +1,5 @@
 .dashboard-section { background: var(--docroi-bg, #f4f6f8); }
+.docroi-logo { display: inline-flex; align-items: center; margin-right: auto; }
 .contract-document { display: grid; gap: 14px; }
 .contract-paper { display: grid; gap: 20px; padding: 26px; border: 1px solid var(--docroi-line-2, #e1e7ef); border-radius: 26px; background: linear-gradient(180deg,#fff,#f8fafc); }
 .contract-doc-head { padding-bottom: 18px; border-bottom: 1px solid var(--docroi-line-2, #e1e7ef); }
