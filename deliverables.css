@@ -2,8 +2,9 @@
 html { scroll-behavior: smooth; }
 #simulador, #contrato, #indicadores { scroll-margin-top: 104px; }
 .docroi-header { border-bottom-color: rgba(255,255,255,.16); }
-.docroi-header-row { min-height: 82px; }
-.docroi-logo { display: inline-flex; align-items: center; margin-right: auto; text-decoration: none; }
+.docroi-header-row { min-height: 82px; justify-content: flex-start; }
+.solution-tag { display: none !important; }
+.docroi-logo { display: inline-flex; align-items: center; justify-content: flex-start; margin-right: auto; text-decoration: none; }
 .docroi-logo img { width: auto; height: 52px; max-width: 190px; object-fit: contain; filter: none; border-radius: 0; }
 .docroi-top-nav { margin-left: auto; }
 .docroi-nav-cta { background: #d8ecf8; color: #003b5c !important; border: 1px solid rgba(216,236,248,.86); }
