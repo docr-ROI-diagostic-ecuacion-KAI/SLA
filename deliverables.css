@@ -1,5 +1,19 @@
 .dashboard-section { background: var(--docroi-bg, #f4f6f8); }
-.docroi-logo { display: inline-flex; align-items: center; margin-right: auto; }
+html { scroll-behavior: smooth; }
+#simulador, #contrato, #indicadores { scroll-margin-top: 104px; }
+.docroi-header { border-bottom-color: rgba(255,255,255,.16); }
+.docroi-header-row { min-height: 82px; }
+.docroi-logo { display: inline-flex; align-items: center; margin-right: auto; text-decoration: none; }
+.docroi-logo img { width: auto; height: 52px; max-width: 190px; object-fit: contain; filter: none; border-radius: 0; }
+.docroi-top-nav { margin-left: auto; }
+.docroi-nav-cta { background: #d8ecf8; color: #003b5c !important; border: 1px solid rgba(216,236,248,.86); }
+.docroi-nav-cta:hover { background: #fff !important; color: #0b0f19 !important; }
+.docroi-menu-toggle { display: none; width: 46px; height: 46px; align-items: center; justify-content: center; gap: 5px; flex-direction: column; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(255,255,255,.06); cursor: pointer; }
+.docroi-menu-toggle span { display: block; width: 18px; height: 2px; border-radius: 99px; background: #fff; }
+.docroi-footer-logo-link { display: inline-flex; justify-content: center; margin: 0 auto 34px; }
+.docroi-footer-logo-link .docroi-footer-logo { margin: 0; }
+.docroi-footer .legal-owner a { color: #fff; text-decoration: none; }
+.docroi-footer .legal-owner a:hover { text-decoration: underline; }
 .contract-document { display: grid; gap: 14px; }
 .contract-paper { display: grid; gap: 20px; padding: 26px; border: 1px solid var(--docroi-line-2, #e1e7ef); border-radius: 26px; background: linear-gradient(180deg,#fff,#f8fafc); }
 .contract-doc-head { padding-bottom: 18px; border-bottom: 1px solid var(--docroi-line-2, #e1e7ef); }
@@ -26,6 +40,26 @@
 .risk-card { min-height: 158px; padding: 18px; }
 .risk-card p { margin: 10px 0 0; color: var(--docroi-muted, #5b6472); font-size: .92rem; line-height: 1.55; }
 @media (max-width: 760px) {
+  #simulador, #contrato, #indicadores { scroll-margin-top: 92px; }
+  .docroi-header-row { min-height: 76px; }
+  .docroi-logo img { height: 44px; max-width: 162px; }
+  .docroi-menu-toggle { display: inline-flex; }
+  .docroi-top-nav {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    top: calc(100% + 10px);
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 14px;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 18px;
+    background: rgba(5,7,11,.98);
+    box-shadow: 0 18px 40px rgba(0,0,0,.28);
+  }
+  .docroi-top-nav.is-open { display: grid; }
+  .docroi-top-nav a { width: 100%; text-align: center; }
   .contract-summary, .contract-clauses, .signature-grid, .risk-grid { grid-template-columns: 1fr; }
   .contract-paper { padding: 18px; }
 }
